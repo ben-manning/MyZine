@@ -1,12 +1,15 @@
 require 'rails_helper'
 
 RSpec.describe WelcomeController, type: :controller do
+  describe "#index" do
+  	before { get :index }
 
-  describe "GET #index" do
-    it "returns http success" do
-      get :index
-      expect(response).to have_http_status(:success)
+    it "returns http status 200" do
+      expect(response).to be_success
+    end
+
+    it "renders the welcome/index view" do
+    	expect(response).to render_template 'welcome/index'
     end
   end
-
 end
