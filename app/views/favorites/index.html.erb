@@ -1,13 +1,12 @@
-<h1>Your Articles!!</h1>
-
 <div>
   <%= render 'form' %>
 </div>
 
+<h1>Your Articles!!</h1>
+
 <div>
   <% @articles.each do |article| %>
-    <h1><%= article.title %></h1><br>
-    <p><%= link_to 'Open', article.url %></p><br>
+    <h1><%= link_to article.title, article.url %></h1><br>
     <p><%= link_to 'Delete', user_favorite_path(current_user, article),
     											 method: :delete,
     											 data: { confirm: 'Are you sure?' } %></p>

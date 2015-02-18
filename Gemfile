@@ -35,6 +35,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'httparty'
 gem 'pundit'
+gem 'figaro'
+gem 'bootstrap_form'
+gem 'therubyracer'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

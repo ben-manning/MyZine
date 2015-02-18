@@ -2,14 +2,15 @@ class FavoritesController < ApplicationController
 	before_action :authenticate_user!
 	
 	def index
-		@articles = Article.all
+		@user = current_user.id
+		@articles = current_user.articles
 	end
 
 	def new
 	end
 
 	def create
-		response = HTTParty.get(params[:api_url] + '?api-key=crvbm7znwyhymyp34fk799ca').parsed_response['response']['content']
+		response = HTTParty.get(params[:api_url] + '?api-key=' + ENV['guardian_key']).parsed_response['response']['content']
 		
 		@article = Article.new(title: response['webTitle'], url: response['webUrl'], api_url: response['apiUrl'])
 		@article.save
