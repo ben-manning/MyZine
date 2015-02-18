@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
+  resources :articles, only: :index
+
   devise_for :users
   get 'welcome/index'
 
   root 'welcome#index'
 
   resources :users, only: :show do
-  resources :favorites, only: [:index, :new, :create, :destroy]
+    resources :favorites, only: [:index, :new, :create, :destroy]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

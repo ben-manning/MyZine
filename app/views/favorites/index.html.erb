@@ -1,8 +1,16 @@
 <h1>Your Articles!!</h1>
 
+<div>
+  <%= render 'form' %>
 </div>
-  <%= form_tag user_favorites_path, method: "get" , class: "input" do %>
-    <%= text_field_tag(:song_name) %>
-    <%= submit_tag("Search") %>
+
+<div>
+  <% @articles.each do |article| %>
+    <h1><%= article.title %></h1><br>
+    <p><%= link_to 'Open', article.url %></p><br>
+    <p><%= link_to 'Delete', user_favorite_path(current_user, article),
+    											 method: :delete,
+    											 data: { confirm: 'Are you sure?' } %></p>
   <% end %>
 </div>
+
