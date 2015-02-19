@@ -1,15 +1,13 @@
-<h1>Articles#index</h1>
-<p>Find me in app/views/articles/index.html.erb</p>
-
 <div>
   <%= render 'form' %>
 </div>
 
+<h1>Results</h1>
+
 <ul>
 	<% @articles.each do |article| %>
 		<li>
-			<h1><%= article["webTitle"] %></h1>	
-			<p><%= link_to 'Open', article["webUrl"] %></p>
+			<h3><%= link_to article["webTitle"], article["webUrl"] %></h3>
 			<p><%= link_to 'Favorite', user_favorites_path(user_id: current_user.to_param, api_url: article["apiUrl"]), remote: true, method: :post %></p>
 		</li>
 	<% end %>
