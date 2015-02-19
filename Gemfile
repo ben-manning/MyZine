@@ -61,5 +61,7 @@ group :development, :test do
 
   # This gem will make Heroku serve your assets (CSS, JS, etc)
   gem 'rails_12factor'
+  end
+
 end
 
