@@ -54,6 +54,7 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
 
   group :production do
     # Heroku uses Postgres in production
@@ -61,7 +62,6 @@ group :development, :test do
 
   # This gem will make Heroku serve your assets (CSS, JS, etc)
   gem 'rails_12factor'
-  end
+ end
 
-end
 
