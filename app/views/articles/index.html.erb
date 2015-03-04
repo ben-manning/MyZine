@@ -2,13 +2,16 @@
   <%= render 'form' %>
 </div>
 
-<h1>Results</h1>
-
+<div class="jumbotron">
+  <div class="results">
+    <h2>Results</h2>
+  </div>
 <ul>
 	<% @articles.each do |article| %>
 		<li>
 			<h3><%= link_to article["webTitle"], article["webUrl"] %></h3>
-			<p><%= link_to 'Favorite', user_favorites_path(user_id: current_user.to_param, api_url: article["apiUrl"]), remote: true, method: :post %></p>
+			<%= link_to 'Favorite', user_favorites_path(user_id: current_user.to_param, api_url: article["apiUrl"]), remote: true, method: :post, class: 'btn btn-primary' %>
 		</li>
 	<% end %>
 </ul>
+</div>

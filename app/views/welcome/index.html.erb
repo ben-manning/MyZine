@@ -1,14 +1,24 @@
-<div class="jumbotron">
-  <h1>Welcome to MyZine</h1>
-    <h3>The online newsstand for all of your reading needs!</h3>
-      <p>Create a list of your favorite articles.</p>
-      <p>Read your articles anytime.</p>
-      <p>Delete your articles whenever you are done.</p>
-</div>
+<body>
 
 <% if user_signed_in? %>
-  </div>
    <%= render 'form' %>
-   </div>
 <% end %>
+
+<div class="jumbotron col-md-12">
+  <div class="newspaper col-md-8">
+    <h1>Welcome to MyZine</h1>
+      <div class="picture">
+        <img src="http://cdn.theatlantic.com/static/mt/assets/politics/newspaper%20fullness.png">
+      </div>
+    <h3>The online newsstand for all of your reading needs!</h3>
+  </div>
+  <div class="intro col-md-4">
+    <p>Save your favorite articles.</p>
+    <p>Read your articles anytime.</p>
+    <p>Delete when you want.</p>
+  </div>
+</div>
+</body>
+
+
 

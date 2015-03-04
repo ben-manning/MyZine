@@ -2,14 +2,19 @@
   <%= render 'form' %>
 </div>
 
-<h1>Your Articles!!</h1>
-
-<div>
+<!-- <div class="your-articles">
+  <h1>Your Articles!!</h1>
+</div> -->
+<div class="jumbotron col-md-12">
+  <div class="your-articles">
+    <h2>Your Articles!!</h2>
+  </div>
   <% @articles.each do |article| %>
-    <h3><%= link_to article.title, article.url %></h3><br>
-    <p><%= link_to 'Delete', user_favorite_path(current_user, article),
+    <h3><%= link_to article.title, article.url %></h3>
+    <%= link_to 'Delete', user_favorite_path(current_user, article), class: 'btn btn-danger',
     											 method: :delete,
-    											 data: { confirm: 'Are you sure?' } %></p>
+    											 data: { confirm: 'Are you sure?' } %>
   <% end %>
 </div>
+
 

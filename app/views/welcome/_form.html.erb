@@ -1,5 +1,5 @@
-<%= form_tag articles_path, method: "get" , class: "input" do %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Search") %>
-<% end %>
+  <%= form_tag articles_path, method: "get" , class: "input" do %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
 
