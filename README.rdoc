@@ -1,28 +1,7 @@
-== README
+MyZine
 
-MyZine is an app for users who want to create their own archives of articles into one convenient reading list.
-If you've been looking for a simple way to read the articles you enjoy this is the app for you!!
+This is my third official project while working in the General Assembly Web Development Immersive program in San Francisco.  I very much enjoyed this project.  I wanted to create a simple app that allows a user to search the Guardian archives for news content.  If the user found an article that they liked, they are able to save that article for future reading.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This particlur web app was created with Ruby on Rails, Bootstrap, PostgreSQL, and is deployed on Heroku.  If you would like to explore the site, it can be found at:  https://agile-harbor-1623.herokuapp.com/
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
